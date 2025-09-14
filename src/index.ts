@@ -1,8 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import * as path from 'path';
-import { z } from 'zod';
-import { fileURLToPath } from 'url';
+// Removed unused imports - z and fileURLToPath
 import { ObsidianConfig } from "./types/obsidian.js";
 import { FileUtils } from "./utils/file-utils.js";
 import { ObsidianParser } from "./utils/obsidian-parser.js";
@@ -65,7 +64,7 @@ const parser = new ObsidianParser();
 const linkParser = new LinkParser(fileUtils, parser);
 const searchUtils = new SearchUtils(fileUtils, parser, linkParser, searchCache);
 const metadataUtils = new MetadataUtils(fileUtils, parser);
-const graphUtils = new GraphUtils(fileUtils, linkParser, parser);
+const graphUtils = new GraphUtils(fileUtils, linkParser);
 const vaultUtils = new VaultUtils(fileUtils, parser, linkParser, config);
 
 // Create MCP server

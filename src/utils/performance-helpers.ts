@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import * as readline from 'readline';
-import { pipeline } from 'stream/promises';
 
 /**
  * Simple performance helpers for Claude-only Obsidian MCP server

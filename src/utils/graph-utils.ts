@@ -1,6 +1,5 @@
 import { FileUtils } from "./file-utils.js";
 import { LinkParser } from "./link-parser.js";
-import { ObsidianParser } from "./obsidian-parser.js";
 
 export interface GraphError {
   path?: string;
@@ -38,8 +37,7 @@ export class GraphUtils {
   
   constructor(
     private fileUtils: FileUtils,
-    private linkParser: LinkParser,
-    private parser: ObsidianParser
+    private linkParser: LinkParser
   ) {}
 
   async getBacklinks(path: string): Promise<GraphResponse<string[]>> {

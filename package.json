@@ -6,7 +6,13 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "dev": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf build",
+    "prebuild": "npm run clean"
   },
   "keywords": [
     "mcp",
@@ -30,6 +36,10 @@
     "@types/glob": "^8.1.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.11.18",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
     "typescript": "^5.4.0"
   },
   "engines": {

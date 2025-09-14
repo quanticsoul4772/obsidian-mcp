@@ -1,7 +1,6 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import { glob } from 'glob';
-import { ObsidianNote } from '../types/obsidian.js';
 import { LRUCache } from '../lru-cache.js';
 
 export class FileUtils {

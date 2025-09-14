@@ -1,5 +1,5 @@
 import matter from 'gray-matter';
-import { ObsidianNote, Frontmatter, NoteLink } from '../types/obsidian.js';
+import { Frontmatter, NoteLink } from '../types/obsidian.js';
 
 export class ObsidianParser {
   // Parse frontmatter from content

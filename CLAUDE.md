@@ -72,3 +72,66 @@ This is an MCP (Model Context Protocol) server for Obsidian that provides 42 too
 4. **Cache Invalidation**: File cache entries expire after 1 hour, search cache after 30 minutes
 5. **Large File Support**: Files over 50KB are handled with special streaming techniques
 6. **Frontmatter Preservation**: Update operations preserve existing frontmatter by default
+
+## Testing Strategy
+
+Run tests for specific functionality:
+
+```bash
+# Test file operations
+node build/index.js /path/to/test/vault
+
+# Verify TypeScript compilation
+npx tsc --noEmit
+
+# Check for type errors
+npx tsc --listFiles
+```
+
+## Common Development Tasks
+
+### Adding New Tools
+
+1. Create tool function in appropriate `src/tools/*.ts` file
+2. Define Zod schema for parameter validation
+3. Register tool in the module's export function
+4. Update tool count in README.md and TOOLS_REFERENCE.md
+
+### Modifying Utilities
+
+1. Update utility class in `src/utils/*.ts`
+2. Ensure backward compatibility
+3. Update dependent tools if interface changes
+4. Test with large vault for performance impact
+
+### Performance Monitoring
+
+Check cache statistics in tool responses:
+- `cacheHit`: Whether result was served from cache
+- `cacheSize`: Current cache memory usage
+- `processingTime`: Operation duration
+
+## Error Handling Patterns
+
+The codebase follows structured error handling:
+
+```typescript
+try {
+  // Operation logic
+  return { success: true, data: result };
+} catch (error) {
+  return {
+    success: false,
+    errors: [error.message],
+    metadata: { partial: partialResults }
+  };
+}
+```
+
+## Debug Information
+
+Enable verbose logging by checking:
+- Tool response metadata
+- Cache hit/miss statistics
+- Processing time metrics
+- Error arrays in responses
