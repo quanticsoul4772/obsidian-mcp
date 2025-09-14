@@ -1,0 +1,38 @@
+{
+  "name": "obsidian-mcp",
+  "version": "1.1.1",
+  "description": "MCP server for Claude AI to interact with Obsidian vault",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obsidian",
+    "knowledge-management",
+    "notes",
+    "markdown"
+  ],
+  "author": "Russell Smith",
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "fuse.js": "^7.0.0",
+    "glob": "^10.3.10",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.18",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
