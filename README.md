@@ -1,4 +1,4 @@
-# Obsidian MCP Server (Claude AI Only)
+# Obsidian MCP Server
 
 A Model Context Protocol (MCP) server that provides Claude AI with direct access to Obsidian vaults.
 
