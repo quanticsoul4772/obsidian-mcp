@@ -184,7 +184,7 @@ All operations return structured responses:
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/obsidian-mcp.git
+   git clone https://github.com/quanticsoul4772/obsidian-mcp.git
    cd obsidian-mcp
    ```
 
