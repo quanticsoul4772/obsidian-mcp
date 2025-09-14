@@ -1,10 +1,10 @@
 # Obsidian MCP Server
 
-A Model Context Protocol (MCP) server that provides Claude AI with direct access to Obsidian vaults.
+A Model Context Protocol (MCP) server that provides AI assistants with direct access to Obsidian vaults.
 
 ## Overview
 
-This server enables Claude to read, write, search, and analyze Obsidian markdown notes with error handling and memory optimization.
+This server enables AI assistants to read, write, search, and analyze Obsidian markdown notes with error handling and memory optimization.
 
 ## Key Features
 
@@ -222,7 +222,7 @@ node build/index.js /path/to/your/obsidian/vault
 
 ## Implementation Notes
 
-- No authentication needed (Claude-only access)
+- No authentication needed (AI assistant access only)
 - Conversation-aware caching for repeated operations
 - No complex logging (can't persist between chats)
 - Partial results on errors (operations continue)
